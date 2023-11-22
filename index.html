@@ -1,14 +1,90 @@
-<html lang="de">
+<!DOCTYPE html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Vejin Initiative</title>
+    <style>
+      /* Add your CSS styles here */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f5f5f5;
+      }
+
+      header {
+        background-color: #333;
+        color: white;
+        padding: 1em 0;
+        text-align: center;
+      }
+
+      nav {
+        display: flex;
+        justify-content: center;
+        background-color: #555;
+        padding: 0.5em 0;
+      }
+
+      nav a {
+        color: white;
+        text-decoration: none;
+        padding: 1em;
+      }
+
+      section {
+        padding: 2em;
+      }
+
+      footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 1em 0;
+      }
+    </style>
   </head>
+
   <body>
-    <h1>Vejin</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel adipisci</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel adipisci</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel adipisci</p>
+    <header>
+      <h1>Vejin Initiative</h1>
+    </header>
+
+    <nav>
+      <a href="#" onclick="changeLanguage('en')">English</a>
+      <a href="#" onclick="changeLanguage('ku')">Kurdish</a>
+    </nav>
+
+    <section>
+      <h2 id="welcomeHeader">Welcome to Vejin Initiative</h2>
+      <p id="welcomeText">Empowering Kurdish youth in Germany.</p>
+      <!-- Add more content here as needed -->
+    </section>
+
+    <footer>
+      <p>&copy; 2023 Vejin Initiative. All rights reserved.</p>
+    </footer>
+
+    <script>
+      function changeLanguage(lang) {
+        // You can replace these URLs with the actual URLs of your language-specific pages
+        const englishURL = "english.html";
+        const kurdishURL = "kurdish.html";
+
+        if (lang === "en") {
+          document.getElementById("welcomeHeader").innerText =
+            "Welcome to Vejin Initiative";
+          document.getElementById("welcomeText").innerText =
+            "Empowering Kurdish youth in Germany.";
+          window.location.href = englishURL;
+        } else if (lang === "ku") {
+          document.getElementById("welcomeHeader").innerText =
+            "به‌خێربێیت بۆ ڕاگرتن لەگەڵ جوانانی کوردی لە ئەڵمان";
+          document.getElementById("welcomeText").innerText = "";
+          window.location.href = kurdishURL;
+        }
+      }
+    </script>
   </body>
 </html>
