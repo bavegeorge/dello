@@ -1,22 +1,40 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
-* {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
 
 body {
-  background: #272727;
+  overflow: hidden;
+  background: #b7cfff;
   font-family: "Montserrat", sans-serif;
 }
 
 .navMenu {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  align-items: center;
+}
+
+.title {
+  color: #fddb3a;
+}
+
+.logo { 
+  text-align: center;
+  width: 100px; 
+  height: 100px; 
+}
+
+header {
+
+  text-align: center;
+}
+
+section {
+  text-align: center;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  text-align: center;
+  font-size: 0.5em;
 }
 
 .navMenu a {
@@ -32,7 +50,7 @@ body {
 }
 
 .navMenu a:hover {
-  color: #fddb3a;
+  color: #23a6c3;
 }
 
 .navMenu .dot {
@@ -77,4 +95,77 @@ body {
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   opacity: 1;
+}
+
+body {
+  font: 400 1em/1.5 "Neuton";
+  background: #090d00;
+  color: rgba(255, 255, 255, 0.25);
+  text-align: center;
+  margin: 0;
+}
+p {
+  text-transform: uppercase;
+  letter-spacing: 0.5em;
+}
+p span {
+  font: 700 4em "Oswald", sans-serif;
+  letter-spacing: 0;
+  padding: 0.25em 0 0.325em;
+  display: block;
+
+  margin: 0 auto;
+  text-shadow: 0 0 80px rgba(5, 165, 233, 0.5);
+  /* Clip Background Image */
+  background: url("/Images/panel4.png") repeat-y;
+  -webkit-background-clip: text;
+  background-clip: text;
+  /* Animate Background Image */
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: aitf 4s linear infinite;
+  /* Activate hardware acceleration for smoother animations */
+  -webkit-transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+}
+/* Animate Background Image */
+@-webkit-keyframes aitf {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 180%;
+  }
+}
+
+
+/**/
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+#container {
+  position: absolute;
+  margin: auto;
+  width: 200px;
+  height: 200px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  filter: url(#threshold) blur(0.6px);
+}
+
+#text1,
+#text2 {
+  position: absolute;
+  width: 100%;
+  display: inline-block;
+  font-family: "Raleway", sans-serif;
+  color: #f6f4e6;
+  font-size: 24pt;
+  text-align: center;
+  user-select: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

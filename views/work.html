@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text Animation</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Raleway:900&display=swap"
+    />
+    <link rel="stylesheet" href="/public/styles.css" />
+  </head>
+
+  <body>
+    <header>
+      <img class="logo" src="/Images/logo2.png" />
+      <h1>Vejin Initiative</h1>
+      <nav class="navMenu">
+        <a href="home.html">Home</a>
+        <a href="#">Blog</a>
+        <a href="work.html">Work</a>
+        <a href="about.html">About</a>
+      </nav>
+    </header>
+
+    <div id="container">
+      <span id="text1"></span>
+      <span id="text2"></span>
+    </div>
+
+    <svg id="filters">
+      <defs>
+        <filter id="threshold">
+          <feColorMatrix
+            in="SourceGraphic"
+            type="matrix"
+            values="1 0 0 0 0
+                                    0 1 0 0 0
+                                    0 0 1 0 0
+                                    0 0 0 255 -140"
+          />
+        </filter>
+      </defs>
+    </svg>
+
+    <script src="/js/member.js"></script>
+
+    <footer>
+      <p>&copy; 2023 Vejin Initiative.</p>
+      <p>All rights reserved.</p>
+    </footer>
+  </body>
+</html>
