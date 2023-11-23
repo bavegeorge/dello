@@ -117,7 +117,7 @@ p span {
   margin: 0 auto;
   text-shadow: 0 0 80px rgba(5, 165, 233, 0.5);
   /* Clip Background Image */
-  background: url("/Images/panel4.png") repeat-y;
+  background: url("./Images/panel4.png") repeat-y;
   -webkit-background-clip: text;
   background-clip: text;
   /* Animate Background Image */
